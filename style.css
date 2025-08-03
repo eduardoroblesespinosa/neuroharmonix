@@ -1,0 +1,160 @@
+:root {
+    --primary-glow: rgba(0, 123, 255, 0.5);
+    --background-color: #0d1117;
+    --card-bg-color: #161b22;
+    --card-border-color: #30363d;
+    --text-color: #c9d1d9;
+    --text-muted-color: #8b949e;
+    --accent-color: #58a6ff;
+}
+
+body {
+    background-color: var(--background-color);
+    background-image: url('background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-brand strong {
+    letter-spacing: 0.5px;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
+}
+
+.control-panel-card {
+    backdrop-filter: blur(10px);
+    background-color: rgba(22, 27, 34, 0.8);
+}
+
+.visualization-card {
+    height: 400px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas-container canvas {
+    display: block;
+}
+
+
+.status-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+#status-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    letter-spacing: 2px;
+}
+
+
+.btn-primary {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px var(--primary-glow);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.btn-danger {
+    background-color: #da3633;
+    border-color: #da3633;
+    box-shadow: 0 0 10px rgba(218, 54, 51, 0.5);
+}
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(218, 54, 51, 0.5);
+}
+
+.btn-warning {
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    color: #161b22;
+    box-shadow: 0 0 10px rgba(240, 173, 78, 0.5);
+    transition: all 0.3s ease;
+}
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(240, 173, 78, 0.5);
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+    box-shadow: 0 0 10px rgba(25, 135, 84, 0.5);
+    transition: all 0.3s ease;
+}
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(25, 135, 84, 0.5);
+}
+
+.progress {
+    background-color: var(--card-border-color);
+}
+
+.form-range::-webkit-slider-thumb {
+  background: var(--accent-color);
+}
+.form-range::-moz-range-thumb {
+  background: var(--accent-color);
+}
+
+.accordion-item {
+    background-color: var(--card-bg-color);
+    border-color: var(--card-border-color);
+}
+
+.accordion-button {
+    background-color: #1c2128;
+    color: var(--text-color);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(88, 166, 255, 0.25);
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
+footer {
+    font-size: 0.9rem;
+}
